@@ -232,9 +232,14 @@ class Dataset_Custom(Dataset):
         df_raw.columns: ['date', ...(other features), target feature]
         '''
         cols = list(df_raw.columns)
-        cols.remove(self.target)
+
         cols.remove('date')
-        df_raw = df_raw[['date'] + cols + [self.target]]
+        if self.features == 'M':
+            df_raw = df_raw[['date'] + cols]
+        else:
+           cols.remove(self.target)
+           df_raw = df_raw[['date'] + cols + [self.target]]          
+
         # print(cols)
         num_train = int(len(df_raw) * self.ratios[0])
         num_test = int(len(df_raw) * self.ratios[2])
