@@ -18,7 +18,7 @@ python -u run.py \
   --itr 1 \
   --d_model 256 \
   --d_ff 512 \
-  --n_heads 32 \
+  --n_heads 16 \
   --QAM_end 0.2 \
   --batch_size 64
 

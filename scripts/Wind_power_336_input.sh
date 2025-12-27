@@ -40,7 +40,7 @@ python -u run.py \
   --d_ff 512 \
   --n_heads 32 \
   --QAM_end 0.3 \
-  --batch_size 64
+  --batch_size 128
 
 python -u run.py \
   --is_training 1 \
@@ -60,7 +60,7 @@ python -u run.py \
   --d_ff 512 \
   --n_heads 32 \
   --QAM_end 0.5 \
-  --batch_size 64
+  --batch_size 128
 
 python -u run.py \
   --is_training 1 \
@@ -80,4 +80,4 @@ python -u run.py \
   --d_ff 512 \
   --n_heads 32 \
   --QAM_end 0.7 \
-  --batch_size 64
+  --batch_size 128
